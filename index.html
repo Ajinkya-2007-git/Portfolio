@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ajinkya Pandit | Portfolio</title>
+<meta name="description" content="Ajinkya Pandit, B.E. Information Technology student at SVIT, Vasad. Projects and skills.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&family=Shippori+Mincho+B1:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --moss:#0e1d15; --moss2:#14291d; --haramaki:#2f9e55; --steel:#d5ddd8;
+  --gold:#d9b34a; --blood:#d23a30; --muted:#8fa399;
+  --serif:'Shippori Mincho B1','Hiragino Mincho ProN',serif;
+  --sans:'Hanken Grotesk',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--moss);color:var(--steel);font-family:var(--sans);line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(14,29,21,.85);backdrop-filter:blur(8px);border-bottom:1px solid rgba(213,221,216,.08)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+nav b{font-family:var(--serif);font-size:1.1rem;color:var(--gold)}
+nav ul{display:flex;gap:22px;list-style:none;font-size:.92rem}
+nav a{text-decoration:none;color:var(--muted);transition:color .2s}
+nav a:hover{color:var(--haramaki)}
+
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:96px 0 64px;
+  background:
+   radial-gradient(60% 50% at 80% 20%,rgba(47,158,85,.18),transparent 70%),
+   repeating-linear-gradient(115deg,transparent 0 46px,rgba(47,158,85,.05) 46px 48px)}
+.hero small{display:block;color:var(--gold);font-size:1rem;margin-bottom:12px}
+.name{position:relative;font-family:var(--serif);font-weight:800;font-size:clamp(3rem,11vw,8.2rem);line-height:1;letter-spacing:-.02em}
+.name span{display:block;white-space:nowrap}
+.name .a{clip-path:polygon(0 0,100% 0,100% 38%,0 62%)}
+.name .b{position:absolute;inset:0;clip-path:polygon(0 62%,100% 38%,100% 100%,0 100%);color:var(--haramaki);animation:cut .9s .9s cubic-bezier(.2,.9,.2,1) both}
+@keyframes cut{from{transform:translate(0,0)}to{transform:translate(14px,6px)}}
+.slash{position:absolute;left:-4%;right:-4%;top:50%;height:3px;background:linear-gradient(90deg,transparent,#fff,var(--blood));
+  transform-origin:left;transform:rotate(-12deg) scaleX(0);opacity:0;animation:slash .5s .5s ease-out forwards;box-shadow:0 0 18px var(--blood)}
+@keyframes slash{0%{transform:rotate(-12deg) scaleX(0);opacity:1}70%{transform:rotate(-12deg) scaleX(1);opacity:1}100%{transform:rotate(-12deg) scaleX(1);opacity:0}}
+.hero p.role{margin-top:34px;font-size:1.25rem;max-width:34ch}
+.hero .meta{margin-top:10px;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{display:inline-block;padding:12px 32px;text-decoration:none;font-weight:700;border:2px solid var(--haramaki);
+  clip-path:polygon(0 0,100% 0,calc(100% - 12px) 100%,12px 100%);transition:background .2s,color .2s}
+.btn.fill{background:var(--haramaki);color:var(--moss)}
+.btn:hover{background:var(--gold);border-color:var(--gold);color:var(--moss)}
+
+section{padding:88px 0}
+h2{font-family:var(--serif);font-weight:800;font-size:clamp(2rem,5vw,3.2rem);margin-bottom:8px}
+.sub{color:var(--muted);margin-bottom:44px}
+.swords{display:flex;gap:10px;margin:0 0 22px}
+.swords i{display:block;width:64px;height:3px;background:linear-gradient(90deg,var(--steel),var(--steel) 85%,var(--gold) 85%);transform:skewX(-35deg)}
+.swords i:nth-child(2){width:96px;background:linear-gradient(90deg,var(--steel),var(--steel) 85%,var(--blood) 85%)}
+
+.path{position:relative;border-left:2px solid rgba(47,158,85,.5);margin-left:8px;padding-left:34px;display:grid;gap:34px}
+.step{position:relative}
+.step::before{content:"";position:absolute;left:-43px;top:7px;width:14px;height:14px;background:var(--gold);transform:rotate(45deg)}
+.step h3{font-family:var(--serif);font-size:1.4rem}
+.step p{color:var(--muted)}
+.score{display:inline-block;margin-top:6px;color:var(--gold);font-weight:700}
+.spis{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px}
+.spi{background:var(--moss2);border-left:4px solid var(--haramaki);padding:12px 22px}
+.spi strong{display:block;font-family:var(--serif);font-size:2.4rem;line-height:1.1;color:var(--steel)}
+.spi span{color:var(--muted);font-size:.9rem}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.skill{background:var(--moss2);padding:24px;border-top:3px solid var(--haramaki)}
+.skill:nth-child(2){border-color:var(--gold)}
+.skill:nth-child(3){border-color:var(--blood)}
+.skill:nth-child(4){border-color:var(--steel)}
+.skill h3{font-family:var(--serif);font-size:1.15rem;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips li{list-style:none;padding:4px 12px;border:1px solid rgba(213,221,216,.25);font-size:.92rem}
+.skill p{color:var(--muted);font-size:.95rem}
+
+.projects{display:grid;gap:26px}
+.proj{display:grid;grid-template-columns:130px 1fr;gap:26px;background:var(--moss2);padding:30px;position:relative;overflow:hidden;transition:transform .25s}
+.proj::after{content:"";position:absolute;top:-30%;bottom:-30%;left:-20%;width:6px;background:var(--blood);transform:rotate(18deg) translateX(-200px);transition:transform .6s;box-shadow:0 0 20px var(--blood);pointer-events:none}
+.proj:hover{transform:translateX(6px)}
+.proj:hover::after{transform:rotate(18deg) translateX(1400px)}
+.sword{font-family:var(--serif);font-weight:800;font-size:4.5rem;line-height:1;color:rgba(47,158,85,.55)}
+.proj h3{font-family:var(--serif);font-size:1.5rem}
+.proj .tag{color:var(--gold);font-size:.9rem;margin-bottom:8px}
+.proj ul{margin:10px 0 0 18px}
+.proj ul.chips{margin-left:0}
+.proj .links{display:flex;flex-wrap:wrap;gap:18px;margin-top:18px}
+.proj .links a{font-weight:700;color:var(--haramaki);text-decoration:none;border-bottom:2px solid currentColor}
+.proj .links a:hover{color:var(--gold)}
+
+.contact ul{list-style:none;display:grid;gap:14px;margin-top:10px}
+.contact a{text-decoration:none;border-bottom:1px solid var(--haramaki);padding-bottom:2px;word-break:break-all}
+.contact a:hover{color:var(--gold)}
+.contact li span{display:inline-block;width:92px;color:var(--muted)}
+footer{padding:36px 0;color:var(--muted);text-align:center;border-top:1px solid rgba(213,221,216,.08);font-size:.9rem}
+
+.cut{transition:opacity .8s cubic-bezier(.2,.8,.2,1)}
+html.reveal-ready .cut{opacity:0}
+html.reveal-ready .cut.in{opacity:1}
+
+@media(max-width:640px){
+  nav ul{gap:12px;font-size:.82rem}
+  .proj{grid-template-columns:1fr}
+  .sword{font-size:3rem}
+  .contact li span{display:block}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .name .b{transform:translate(14px,6px)}
+  .slash{display:none}
+  .cut{clip-path:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <b>AP</b>
+    <ul>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <small>Hello, I am</small>
+    <h1 class="name" aria-label="Ajinkya Pandit">
+      <span class="a" aria-hidden="true">Ajinkya<br>Pandit</span>
+      <span class="b" aria-hidden="true">Ajinkya<br>Pandit</span>
+      <i class="slash"></i>
+    </h1>
+    <p class="role">B.E. Information Technology student at SVIT, Vasad.</p>
+    <p class="meta">Currently in 2nd Year</p>
+    <div class="cta">
+      <a class="btn fill" href="#projects">See my projects</a>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<section id="education">
+  <div class="wrap">
+    <div class="swords" aria-hidden="true"><i></i><i></i><i></i></div>
+    <h2>Education</h2>
+    <p class="sub">From Class X to B.E., in order.</p>
+    <div class="path">
+      <div class="step cut">
+        <h3>Class X</h3>
+        <p>The Bright School, GSEB</p>
+        <span class="score">86.5% in 10th Grade</span>
+      </div>
+      <div class="step cut">
+        <h3>Class XII</h3>
+        <p>Tree House High School, GSEB</p>
+        <span class="score">72.46% in 12th Grade</span>
+      </div>
+      <div class="step cut">
+        <h3>B.E. in Information Technology</h3>
+        <p>SVIT, Vasad. Currently in 2nd Year.</p>
+        <div class="spis">
+          <div class="spi"><strong data-to="8.67">8.67</strong><span>SPI in Semester 1</span></div>
+          <div class="spi"><strong data-to="9.59">9.59</strong><span>SPI in Semester 2</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="swords" aria-hidden="true"><i></i><i></i><i></i></div>
+    <h2>Technical skills</h2>
+    <p class="sub">The tools I work with.</p>
+    <div class="skills">
+      <div class="skill cut">
+        <h3>Programming languages</h3>
+        <ul class="chips"><li>C</li><li>C++</li></ul>
+      </div>
+      <div class="skill cut">
+        <h3>Tools and frameworks</h3>
+        <ul class="chips"><li>Hugging Face</li><li>VS Code</li><li>GitHub</li><li>HTML</li></ul>
+      </div>
+      <div class="skill cut">
+        <h3>Core concepts</h3>
+        <ul class="chips"><li>Basic Data Structures</li></ul>
+      </div>
+      <div class="skill cut">
+        <h3>Soft skills</h3>
+        <ul class="chips"><li>Public Speaking</li><li>Pitching</li><li>Teamwork</li></ul>
+        <p style="margin-top:12px">Presented the problem statement and solution to judges at the MECIA Hackathon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="swords" aria-hidden="true"><i></i><i></i><i></i></div>
+    <h2>Projects</h2>
+    <p class="sub">Three projects, three blades.</p>
+    <div class="projects">
+
+      <article class="proj cut">
+        <div class="sword" aria-hidden="true">一</div>
+        <div>
+          <h3>Nirvaan: Help Finds You</h3>
+          <div class="tag">Disaster management app</div>
+          <ul>
+            <li>Built so people who need help during disasters can be connected to rescuers and NGOs.</li>
+          </ul>
+          <div class="links">
+            <a href="https://nirvaan-liberation.vercel.app" target="_blank" rel="noopener">Website</a>
+            <a href="https://github.com/Ajinkya-2007-git/Nirvaan-Liberation" target="_blank" rel="noopener">GitHub repo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj cut">
+        <div class="sword" aria-hidden="true">二</div>
+        <div>
+          <h3>Handwritten Digit Recognizer</h3>
+          <div class="tag">Hugging Face Space</div>
+          <ul>
+            <li>Recognizes any digit that is drawn or written in it.</li>
+            <li>Uses a pre-trained model from Hugging Face, deployed as a Space on Hugging Face itself.</li>
+          </ul>
+          <div class="links">
+            <a href="https://ajinkya007-my-handwrittendigit-recognizer.hf.space" target="_blank" rel="noopener">Website</a>
+            <a href="https://github.com/Ajinkya-2007-git/Handwritten-Digit-Recognizer" target="_blank" rel="noopener">GitHub repo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj cut">
+        <div class="sword" aria-hidden="true">三</div>
+        <div>
+          <h3>Distance Measurement System</h3>
+          <div class="tag">Hardware project</div>
+          <ul>
+            <li>Gives accurate distance between itself and an object.</li>
+            <li>Starts buzzing when the object comes nearer than a certain distance.</li>
+          </ul>
+          <ul class="chips" style="margin-top:16px">
+            <li>Arduino Uno (coded in C++)</li><li>HC-SR04 Ultrasonic Distance Sensor</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="swords" aria-hidden="true"><i></i><i></i><i></i></div>
+    <h2>Contact</h2>
+    <p class="sub">Reach me here.</p>
+    <ul>
+      <li><span>Phone</span><a href="tel:+918511445004">+91 8511445004</a></li>
+      <li><span>Email</span><a href="mailto:ajinkya.pandit07@gmail.com">ajinkya.pandit07@gmail.com</a></li>
+      <li><span>LinkedIn</span><a href="https://linkedin.com/in/ajinkya-pandit-3a57b5369/" target="_blank" rel="noopener">linkedin.com/in/ajinkya-pandit-3a57b5369</a></li>
+      <li><span>GitHub</span><a href="https://github.com/Ajinkya-2007-git" target="_blank" rel="noopener">github.com/Ajinkya-2007-git</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>© Ajinkya Pandit</footer>
+
+<script>
+const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!reduceMotion&&'IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+  }),{threshold:.2});
+  document.documentElement.classList.add('reveal-ready');
+  document.querySelectorAll('.cut').forEach((el,i)=>{
+    el.style.transitionDelay=(i%4)*70+'ms';
+    io.observe(el);
+  });
+
+  const co=new IntersectionObserver(es=>es.forEach(e=>{
+    if(!e.isIntersecting)return;
+    const el=e.target,to=parseFloat(el.dataset.to),t0=performance.now();
+    (function f(t){const p=Math.min((t-t0)/1200,1);el.textContent=(to*(1-Math.pow(1-p,3))).toFixed(2);if(p<1)requestAnimationFrame(f)})(t0);
+    co.unobserve(el);
+  }),{threshold:.6});
+  document.querySelectorAll('[data-to]').forEach(el=>co.observe(el));
+}
+</script>
+</body>
+</html>
